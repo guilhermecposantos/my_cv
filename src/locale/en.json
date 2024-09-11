@@ -1,0 +1,32 @@
+{
+    "profile": {
+        "profile": "Informatics and Computing Engineering Student",
+        "profileDescription": "Informatics and Computing Engineering student currently in the third year, consistent and committed worker, as well as an excellent partner of work. Software development and artificial intelligence (particularly machine learning) are his favorite areas."
+    },
+    "education": {
+        "education": "Education",
+        "feup": {
+            "institution": "Faculty of Engineering at the University of Porto",
+            "timeline": "Present"
+        },
+        "liceu": {
+            "institution": "Latino Coelho Highschool"
+        }
+    },
+    "experience": {
+        "SkySIGMA": {
+            "name": "SkySIGMA",
+            "type": "Curricular Internship",
+            "about": "Development of modular HR software",
+            "description": "Development of a multi-company software module dedicated to human resources management. Features developed such as team calendar, absence marking and work timer in Codeigniter PHP. Agile methodology used. All the Software Engineering stages were  respected in the process"
+        },
+        "NIAEFEUP": {
+            "name": "NIAEFEUP",
+            "type": "Events Coordinator",
+            "description": "Member of the NIAEFEUP board as coordinator of the Events department in a school group with 100+ active members. Coordination of a team with 15 members."
+        }
+    },
+    "extraCurricular": {
+        "description": "IT Support Technician European Elections 2024 : Support in the process of dematerialization of electoral rolls | FEUP Mentoring : Integration of 1st year students | React The Complete Guide 2023 by Maximilian Schwarzmüller : Udemy platform course | Member of the Lamego-Bouchemaine Gemination Association"
+    }
+}
