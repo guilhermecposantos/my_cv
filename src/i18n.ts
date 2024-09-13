@@ -5,6 +5,7 @@ import en from './locale/en.json';
 i18n
   .use(initReactI18next)
   .init({
+    returnObjects: true,
     resources: {
       en: {
         translation: en, 

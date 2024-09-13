@@ -17,7 +17,7 @@ type Props = {}
 
 const relatedTechnologies: { [key: string]: string[] } = {
     python: ['scikit-learn', 'pandas', 'numpy'],
-    javascript: ['react', 'nodejs', 'nextjs', 'typescript', 'tailwindcss'],
+    javascript: ['react', 'nodejs', 'nextjs', 'tailwindcss'],
     typescript: ['react', 'nodejs', 'nextjs', 'tailwindcss'],
     php: ['laravel', 'codeigniter']
 };

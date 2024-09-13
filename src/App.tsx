@@ -2,9 +2,14 @@ import { useTranslation } from "react-i18next";
 import Navbar from "./navbar/Navbar";
 import Profile from "./profile/Profile";
 import Technologies from "./technologies/Technologies";
+import Experience from "./experience/Experience";
+import { useScroll, useSpring } from "framer-motion";
 
 function App() {
-  const { t } = useTranslation();
+
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress)
+
   return (
     <div className="overflow-x-hidden text-neutral-300">
       <div className="fixed top-0 -z-10 h-full w-full">
@@ -14,6 +19,7 @@ function App() {
         <Navbar />
         <Profile />
         <Technologies />
+        <Experience />
       </div>
 
     </div>

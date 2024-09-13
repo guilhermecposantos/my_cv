@@ -18,12 +18,26 @@
             "name": "SkySIGMA",
             "type": "Curricular Internship",
             "about": "Development of modular HR software",
-            "description": "Development of a multi-company software module dedicated to human resources management. Features developed such as team calendar, absence marking and work timer in Codeigniter PHP. Agile methodology used. All the Software Engineering stages were  respected in the process"
+            "startDate": "February 2024",
+            "endDate": "July 2024",
+            "technologies": "Codeigniter, PHP, MySQL, Javascript, Bitbucket",
+            "description": "Development of a multi-company software module dedicated to human resources management. Features developed such as team calendar, absence marking and work timer in Codeigniter PHP. Agile methodology used. All the Software Engineering stages were respected in the process"
+        },
+        "UPDigital": {
+            "name": "UPDigital",
+            "type": "Summer Internship",
+            "startDate": "July 2023",
+            "endDate": "September 2023",
+            "technologies": "Typescript, Next.js, Node.js, Django, PostgreSQL, Docker, Tailwindcss",
+            "description": "Development of a web application for the management of Student Scholarships."
+
         },
         "NIAEFEUP": {
             "name": "NIAEFEUP",
             "type": "Events Coordinator",
-            "description": "Member of the NIAEFEUP board as coordinator of the Events department in a school group with 100+ active members. Coordination of a team with 15 members."
+            "startDate": "June 2024",
+            "endDate": "Present",
+            "description": "Member of the NIAEFEUP as coordinator of the Events department in a school group with 100+ active members. Coordination of a team with 15 members."
         }
     },
     "extraCurricular": {
