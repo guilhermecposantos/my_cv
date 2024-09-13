@@ -8,7 +8,7 @@ import ExperienceBlock from './ExperienceBlock'
 type Props = {}
 
 const Experience = (props: Props) => {
-    const arr = [skysigma, updigital, niaefeup]
+    const arr = [updigital, niaefeup, skysigma]
     const { t } = useTranslation()
     const experience: any = t('experience')
 

@@ -103,9 +103,9 @@ const ExperienceBlock = (props: Props) => {
                             <p className='mb-4 text-md text-neutral-600'>
                                 {props.expItem.startDate + ' - ' + props.expItem.endDate}
                             </p>
-                            {props.index === 0 && (
+                            {props.index === 2 && (
                                 <div className='md:flex lg:flex'>
-                                    <div className='w-[100%] h-[100%]'>
+                                    <div className='w-[100%]'>
                                         <ReactPlayer
                                             width='100%'
                                             muted
@@ -113,46 +113,44 @@ const ExperienceBlock = (props: Props) => {
                                             url={"https://www.youtube.com/watch?v=9bZqYLlIw6A"}
                                         />
                                     </div>
-
-
-                                    <div className='gap-4 flex lg:flex-col md:flex-col justify-center m-2'>
-                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-2 ml-4'>
+                                    <div className='gap-2 flex lg:flex-col md:flex-col justify-center m-2 p-4'>
+                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-1 m-1 md:p-2 md:ml-2 lg:p-2 lg:ml-2'>
                                             <SiCodeigniter className='text-5xl text-[#DD4814]' />
                                         </div>
-                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-2 ml-4'>
+                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-1 m-1 md:p-2 md:ml-2 lg:p-2 lg:ml-2'>
                                             <SiMysql className='text-5xl text-[#00758f]' />
                                         </div>
-                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-2 ml-4'>
+                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-1 m-1 md:p-2 md:ml-2 lg:p-2 lg:ml-2'>
                                             <SiPhp className='text-5xl text-[#AEB2D5]' />
                                         </div>
-                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-2 ml-4'>
+                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-1 m-1 md:p-2 md:ml-2 lg:p-2 lg:ml-2'>
                                             <SiJavascript className='text-5xl text-[#f0db4f]' />
                                         </div>
                                     </div>
                                 </div>)}
-                            {props.index === 1 && (
+                            {props.index === 0 && (
                                 <div className='md:flex lg:flex'>
                                     <video className='md:w-5/6 md:h-5/6 lg:w-5/6 lg:h-5/6'
                                         autoPlay loop muted src={UPDigitalVideo}
                                     />
-                                    <div className='gap-4 flex lg:flex-col md:flex-col justify-center m-2'>
-                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-2 ml-4'>
+                                    <div className='gap-2 flex lg:flex-col md:flex-col justify-center m-2 p-4'>
+                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-1 m-1 md:p-2 md:ml-2 lg:p-2 lg:ml-2'>
                                             <SiCodeigniter className='text-5xl text-[#DD4814]' />
                                         </div>
-                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-2 ml-4'>
+                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-1 m-1 md:p-2 md:ml-2 lg:p-2 lg:ml-2'>
                                             <SiMysql className='text-5xl text-[#00758f]' />
                                         </div>
-                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-2 ml-4'>
+                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-1 m-1 md:p-2 md:ml-2 lg:p-2 lg:ml-2'>
                                             <SiPhp className='text-5xl text-[#AEB2D5]' />
                                         </div>
-                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-2 ml-4'>
+                                        <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-1 m-1 md:p-2 md:ml-2 lg:p-2 lg:ml-2'>
                                             <SiJavascript className='text-5xl text-[#f0db4f]' />
                                         </div>
                                     </div>
                                 </div>
                             )}
 
-                            {props.index === 2 && (
+                            {props.index === 1 && (
                                 <Carousel />
                             )}
                         </motion.div>

@@ -10,7 +10,7 @@ import { motion, useMotionValue, useMotionValueEvent } from 'framer-motion';
 
 const images = [niaefeup3, niaefeup4, niaefeup5, niaefeup6, niaefeup7];
 
-const DRAG_BUFFER = 100;
+const DRAG_BUFFER = 20;
 
 const SPRING_OPTIONS = {
     type:"spring",
