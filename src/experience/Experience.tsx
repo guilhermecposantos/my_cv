@@ -33,9 +33,9 @@ const Experience = (props: Props) => {
                         const expItem = experience[key]
                         return (
                             <div key={key}>
-                            <ExperienceBlock expItem={expItem} image={arr[index]}/>
+                                <ExperienceBlock expItem={expItem} image={arr[index]} index={index} />
                             </div>
-                            
+
                         )
                     })}
                 </div>
