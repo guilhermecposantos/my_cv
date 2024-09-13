@@ -26,7 +26,7 @@ const Experience = (props: Props) => {
 
     return (
         <div className='relative flex' ref={experienceRef}>
-            <div className='ml-8 border-b border-neutral-900 pb-4 w-full'>
+            <div className='m-8 border-b border-neutral-900 pb-4 w-full'>
                 <h1 className='my-20 text-center text-4xl'>Experience</h1>
                 <div>
                     {Object.keys(experience).map((key, index) => {
@@ -40,7 +40,7 @@ const Experience = (props: Props) => {
                     })}
                 </div>
                 <motion.div
-                    className="absolute lg:top-[215px] md:top-[215px] right-10 lg:right-[350px] h-full w-1 bg-white origin-top"
+                    className="md:absolute lg:absolute lg:top-[215px] md:top-[215px] md:right-10 lg:right-[350px] md:h-full lg:h-full md:w-1 lg:w-1 lg:bg-white md:bg-white md:origin-top lg:origin-top"
                     style={{ scaleY }}
                 />
             </div>
