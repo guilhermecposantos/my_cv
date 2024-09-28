@@ -1,10 +1,10 @@
 import React, { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { motion, useScroll, useSpring } from 'framer-motion'
 import niaefeup from '../assets/NIAEFEUP1.jpg'
 import skysigma from '../assets/SkySIGMA1.png'
 import updigital from '../assets/UPDigital.png'
 import ExperienceBlock from './ExperienceBlock'
+import { motion } from 'framer-motion'
 type Props = {}
 
 const Experience = (props: Props) => {
@@ -14,21 +14,21 @@ const Experience = (props: Props) => {
 
     const experienceRef = useRef(null)
 
-    const { scrollYProgress } = useScroll({
-        target: experienceRef
-    })
-
-    const scaleY = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        restDelta: 0.001
-    })
-
     return (
-        <div className='relative flex' ref={experienceRef}>
-            <div className='m-8 border-b border-neutral-900 pb-4 w-full'>
-                <h1 className='my-20 text-center text-4xl'>Experience</h1>
-                <div>
+        <div className='flex m-4 p-8' ref={experienceRef}>
+            <div className='m-8 border-b border-neutral-900 pb-4 w-screen'>
+                <motion.h1 
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: -100 }}
+                transition={{ duration: 0.5 }}
+                className='my-20 text-center text-4xl'>Experience</motion.h1>
+                <motion.div 
+                 whileInView={{ opacity: 1, y: 0 }}
+                 initial={{ opacity: 0, y: -100 }}
+                 transition={{ duration: 0.7 }}
+                className='flex flex-col justify-center items-center'
+                
+                >
                     {Object.keys(experience).map((key, index) => {
                         const expItem = experience[key]
                         return (
@@ -38,11 +38,7 @@ const Experience = (props: Props) => {
 
                         )
                     })}
-                </div>
-                <motion.div
-                    className="md:absolute lg:absolute lg:top-[215px] md:top-[215px] md:right-10 lg:right-[350px] md:h-full lg:h-full md:w-1 lg:w-1 lg:bg-white md:bg-white md:origin-top lg:origin-top"
-                    style={{ scaleY }}
-                />
+                </motion.div>
             </div>
         </div>
     )

@@ -11,6 +11,10 @@ import niaefeup6 from '../assets/niaefeup6.jpeg';
 import niaefeup7 from '../assets/niaefeup7.jpeg';
 import UPDigitalVideo from '../assets/UPDigitalVideo.mp4';
 import { Carousel } from './Carousel';
+import { TbBrandNextjs } from 'react-icons/tb';
+import { DiDjango } from 'react-icons/di';
+import { BiLogoPostgresql } from 'react-icons/bi';
+import { FaDocker } from 'react-icons/fa';
 
 type Props = {
     expItem: any,
@@ -18,6 +22,8 @@ type Props = {
     index: any,
     itemRef?: any
 }
+
+const images = [niaefeup3, niaefeup4, niaefeup5, niaefeup6, niaefeup7];
 
 const ExperienceBlock = (props: Props) => {
 
@@ -40,7 +46,7 @@ const ExperienceBlock = (props: Props) => {
                 ref={blockRef}
                 initial={{ borderRadius: "16px" }}
             >
-                <motion.div layout className='w-full lg:w-1/2'>
+                <motion.div layout className='w-full'>
                     <motion.div layout className='flex items-center gap-10'>
                         <motion.div
                             layout
@@ -135,23 +141,23 @@ const ExperienceBlock = (props: Props) => {
                                     />
                                     <div className='gap-2 flex lg:flex-col md:flex-col justify-center m-2 p-4'>
                                         <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-1 m-1 md:p-2 md:ml-2 lg:p-2 lg:ml-2'>
-                                            <SiCodeigniter className='text-5xl text-[#DD4814]' />
+                                            <TbBrandNextjs className='text-5xl text-white' />
                                         </div>
                                         <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-1 m-1 md:p-2 md:ml-2 lg:p-2 lg:ml-2'>
-                                            <SiMysql className='text-5xl text-[#00758f]' />
+                                            <DiDjango className='text-5xl text-cyan-400 text-green-400' />
                                         </div>
                                         <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-1 m-1 md:p-2 md:ml-2 lg:p-2 lg:ml-2'>
-                                            <SiPhp className='text-5xl text-[#AEB2D5]' />
+                                            <BiLogoPostgresql className='text-5xl text-[#0064a5]' />
                                         </div>
                                         <div className='rounded-2xl bg-neutral-800 border-4 border-neutral-800 p-1 m-1 md:p-2 md:ml-2 lg:p-2 lg:ml-2'>
-                                            <SiJavascript className='text-5xl text-[#f0db4f]' />
+                                            <FaDocker className='text-5xl text-[#0db7ed]' />
                                         </div>
                                     </div>
                                 </div>
                             )}
 
                             {props.index === 1 && (
-                                <Carousel />
+                                <Carousel images={images} />
                             )}
                         </motion.div>
                     </motion.div>

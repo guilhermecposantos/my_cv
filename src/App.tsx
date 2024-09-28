@@ -2,6 +2,8 @@ import Navbar from "./navbar/Navbar";
 import Profile from "./profile/Profile";
 import Technologies from "./technologies/Technologies";
 import Experience from "./experience/Experience";
+import Projects from "./projects/Projects";
+import Footer from "./footer/Footer";
 
 function App() {
 
@@ -13,10 +15,11 @@ function App() {
       <div className="container mx-auto">
         <Navbar />
         <Profile />
-        <Technologies />
         <Experience />
+        <Technologies />
+        <Projects />
+    
       </div>
-
     </div>
   );
 }

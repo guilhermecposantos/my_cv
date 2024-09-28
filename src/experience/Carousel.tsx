@@ -1,5 +1,4 @@
-import React, { Dispatch, SetStateAction, useEffect } from 'react'
-import niaefeup2 from '../assets/niaefeup2.png';
+import React, { Dispatch, SetStateAction} from 'react'
 import niaefeup3 from '../assets/niaefeup3.jpg';
 import niaefeup4 from '../assets/niaefeup4.jpg';
 import niaefeup5 from '../assets/niaefeup5.jpg';
@@ -7,8 +6,6 @@ import niaefeup6 from '../assets/niaefeup6.jpeg';
 import niaefeup7 from '../assets/niaefeup7.jpeg';
 import { motion, useMotionValue, useMotionValueEvent } from 'framer-motion';
 
-
-const images = [niaefeup3, niaefeup4, niaefeup5, niaefeup6, niaefeup7];
 
 const DRAG_BUFFER = 20;
 
@@ -19,7 +16,12 @@ const SPRING_OPTIONS = {
     damping: 50,
 }
 
-export const Carousel = () => {
+type Props = {
+    images: string[];
+}
+
+
+export const Carousel = (props : Props) => {
 
     const [dragging, setDragging] = React.useState(false);
     const [imgIndex, setImgIndex] = React.useState(0);
@@ -43,7 +45,7 @@ export const Carousel = () => {
 
         const x = dragX.get();
 
-        if (x <= -DRAG_BUFFER && imgIndex < images.length - 1) {
+        if (x <= -DRAG_BUFFER && imgIndex < props.images.length - 1) {
             setImgIndex((prev) => prev + 1);
         }
         else if (x >= DRAG_BUFFER && imgIndex > 0) {
@@ -67,18 +69,18 @@ export const Carousel = () => {
                     SPRING_OPTIONS
                 }
             >
-                <Images imgIndex={imgIndex}/>
+                <Images imgIndex={imgIndex} imgs={props.images}/>
             </motion.div>
-            <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
+            <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} imgs={props.images}/>
         </div>
     )
 }
 
 
-const Images = ({imgIndex} : {imgIndex : number}) => {
+const Images = ({imgIndex, imgs} : {imgIndex : number, imgs : string[]} ) => {
     return (
         <>
-            {images.map((image, index) => {
+            {imgs.map((image, index) => {
 
                 return (
                     <motion.div
@@ -103,12 +105,12 @@ const Images = ({imgIndex} : {imgIndex : number}) => {
     )
 }
 
-const Dots = ({ imgIndex, setImgIndex }: { imgIndex: number; setImgIndex: Dispatch<SetStateAction<number>>; }) => {
+const Dots = ({ imgIndex, setImgIndex, imgs}: { imgIndex: number; setImgIndex: Dispatch<SetStateAction<number>>; imgs : string[]}) => {
     return (
         <div
             className='mt-4 flex w-full justify-center gap-2'
         >
-            {images.map((img, index) => {
+            {imgs.map((img, index) => {
                 return <button
                     key={index}
                     onClick={() => setImgIndex(index)}
